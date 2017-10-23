@@ -10,6 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20171023182839) do
+
+  create_table "estado_usuarios", force: :cascade do |t|
+    t.string "nombre", limit: 16, null: false
+  end
+
+  create_table "usuarios", force: :cascade do |t|
+    t.string "usuario", limit: 32, null: false
+    t.string "contrasenia", limit: 80, null: false
+    t.integer "estado_usuario_id"
+  end
 
 end
