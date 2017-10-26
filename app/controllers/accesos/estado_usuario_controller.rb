@@ -1,5 +1,5 @@
 class Accesos::EstadoUsuarioController < ApplicationController
     def listar
-        render :plain =>  Accesos::EstadoUsuario.all.to_a.to_json
+        render :plain =>  Accesos::EstadoUsuario.all.to_json
     end
 end
